@@ -1,6 +1,12 @@
 Usually, Tailwind should be built on the fly. But sometimes, you need to bundle it up and save it.
 
+To install:
+
+```bash
+npm install tailwind-bundle --save
 ```
+
+```javascript
 const tailwind = require('tailwind-bundle');
 
 const tailwindConfig = { ... }; // This is the config https://tailwindcss.com/docs/configuration (content is ignored)
@@ -10,7 +16,7 @@ tailwind('<div class="bg-blue-300"></div>', { selector: '.test' }, tailwindConfi
 
 Or you can await using:
 
-```
+```javascript
 await tailwind('<div class="bg-blue-300"></div>', { selector: '.test' }, tailwindConfig);
 ```
 
