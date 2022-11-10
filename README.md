@@ -6,6 +6,14 @@ To install:
 npm install tailwind-bundle --save
 ```
 
+And the paramaters are:
+
+```javascript
+tailwind(html, config, tailwindConfig)
+```
+
+Here's som examples:
+
 ```javascript
 const tailwind = require('tailwind-bundle');
 
@@ -22,5 +30,5 @@ await tailwind('<div class="bg-blue-300"></div>', { selector: '.test' }, tailwin
 
 Here's the `config` options:
 
-  * **selector** Prefix each generated selector with this, for the sake of scoping
-  * **includeBase** This will include `@tailwind base`, which resets a lot of CSS
+  * **selector** Prefix each generated selector with this, for the sake of scoping (default: '')
+  * **includeBase** This will include `@tailwind base`, which resets a lot of CSS (default: false)
